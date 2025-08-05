@@ -26,7 +26,7 @@ export default defineConfig({
       manifest: {
         name: 'Meu App PWA',
         short_name: 'MeuApp',
-        start_url: '.',
+        start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#4DBA87',
