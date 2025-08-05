@@ -24,24 +24,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',  // atualiza automaticamente o service worker
       manifest: {
-        name: 'Meu App PWA',
-        short_name: 'MeuApp',
-        start_url: '/',
-        display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#4DBA87',
-        icons: [
-          {
-            src: 'icons/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
+
       },
       workbox: {
         cleanupOutdatedCaches: true,
