@@ -21,7 +21,13 @@ export default defineConfig({
     Vue({
       template: { transformAssetUrls },
     }),
-    VitePWA({ registerType: 'autoUpdate' }),//Adicionamos o plugin para o pwa
+    VitePWA({
+      registerType: 'autoUpdate',
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true
+      }
+    }),//Adicionamos o plugin para o pwa
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
       autoImport: true,
