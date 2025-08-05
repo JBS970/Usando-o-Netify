@@ -25,14 +25,4 @@ registerPlugins(app)
 app.mount('#app')
 
 
-
-const updateSW = registerSW({
-    onNeedRefresh() {
-        if (confirm('Nova versão disponível. Recarregar?')) {
-            updateSW()
-        }
-    },
-    onOfflineReady() {
-        console.log('App pronto para uso offline')
-    }
-})
+registerSW({ immediate: true })

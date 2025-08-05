@@ -23,13 +23,9 @@ export default defineConfig({
     }),
     VitePWA({
       registerType: 'autoUpdate',  // atualiza automaticamente o service worker
-      manifest: {
-
+      devOptions: {
+        enabled: true
       },
-      workbox: {
-        cleanupOutdatedCaches: true,
-        clientsClaim: true
-      }
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
